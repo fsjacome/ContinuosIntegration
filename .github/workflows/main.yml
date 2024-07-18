@@ -1,0 +1,11 @@
+on:
+ pull_request:
+   branches:
+   - main
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - run: pylint $(git ls-files '*.py')
+
+   
